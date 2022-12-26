@@ -1,11 +1,13 @@
 # ticker
+a ticker save service for binance futures.
+
 
 ## windows
-`go mod tidy`
-`go build`
-`ticker.ext > out.log`
+1. `go mod tidy`
+2. `go build`
+3. `ticker.ext > out.log`
 
 ## linux
-`go mod tidy`
-`go build`
-`nohup ticker > out.log &`
+1. `go mod tidy`
+2. `go build`
+3. `nohup ticker > out.log &`
