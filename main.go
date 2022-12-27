@@ -37,7 +37,7 @@ func main() {
 			ActiveBuyVolume:      event.Kline.ActiveBuyVolume,
 			ActiveBuyQuoteVolume: event.Kline.ActiveBuyQuoteVolume,
 		}
-		if _, err := models.TickerCollection.InsertOne(context.TODO(), &ticker, options.InsertOne()); err != nil {
+		if _, err := models.TickerCollection.InsertOne(context.TODO(), ticker, options.InsertOne()); err != nil {
 			log.Error(err)
 		}
 	}

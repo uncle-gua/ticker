@@ -4,6 +4,7 @@ import (
 	"context"
 	"time"
 
+	"github.com/uncle-gua/log"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -18,15 +19,13 @@ const (
 	DBHost = "mongodb://localhost:27017"
 )
 
-func Init() (err error) {
+func init() {
 	ctx, cancel := context.WithTimeout(context.Background(), 20*time.Second)
 	defer cancel()
+
+	var err error
 	Client, err = mongo.Connect(ctx, options.Client().ApplyURI(DBHost))
-	if err != nil {
-		return err
-	}
+	log.Fatal(err)
 
 	TickerCollection = Client.Database(DBName).Collection("ETHUSDT_1m")
-
-	return nil
 }
