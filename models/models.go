@@ -4,6 +4,8 @@ import (
 	"context"
 	"time"
 
+	"ticker/config"
+
 	"github.com/uncle-gua/log"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -11,12 +13,7 @@ import (
 
 var Client *mongo.Client
 var (
-	TickerCollection *mongo.Collection
-)
-
-const (
-	DBName = "ticker"
-	DBHost = "mongodb://localhost:27017"
+	Database *mongo.Database
 )
 
 func init() {
@@ -24,10 +21,10 @@ func init() {
 	defer cancel()
 
 	var err error
-	Client, err = mongo.Connect(ctx, options.Client().ApplyURI(DBHost))
+	Client, err = mongo.Connect(ctx, options.Client().ApplyURI(config.Database.Host))
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	TickerCollection = Client.Database(DBName).Collection("ETHUSDT_1m")
+	Database = Client.Database(config.Database.Name)
 }

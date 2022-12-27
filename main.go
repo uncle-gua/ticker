@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"ticker/models"
+	"time"
 
 	"github.com/uncle-gua/go-binance/v2/futures"
 	"github.com/uncle-gua/log"
@@ -37,7 +38,8 @@ func main() {
 			ActiveBuyVolume:      event.Kline.ActiveBuyVolume,
 			ActiveBuyQuoteVolume: event.Kline.ActiveBuyQuoteVolume,
 		}
-		if _, err := models.TickerCollection.InsertOne(context.TODO(), ticker, options.InsertOne()); err != nil {
+		collection := time.UnixMilli(ticker.StartTime).UTC().Format("20060102")
+		if _, err := models.Database.Collection(collection).InsertOne(context.TODO(), ticker, options.InsertOne()); err != nil {
 			log.Error(err)
 		}
 	}
