@@ -1,10 +1,13 @@
 package main
 
 import (
-	"fmt"
+	"context"
+	"ticker/models"
 
 	"github.com/uncle-gua/go-binance/v2/futures"
 	"github.com/uncle-gua/log"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 const (
@@ -14,25 +17,29 @@ const (
 
 func main() {
 	wsKlineHandler := func(event *futures.WsKlineEvent) {
-		fmt.Printf("%d %d %d %s %s %d %d %.2f %.2f %.2f %.2f %.2f %d %v %.2f %.2f %.2f\n",
-			event.Time,
-			event.Kline.StartTime,
-			event.Kline.EndTime,
-			event.Kline.Symbol,
-			event.Kline.Interval,
-			event.Kline.FirstTradeID,
-			event.Kline.LastTradeID,
-			event.Kline.Open,
-			event.Kline.High,
-			event.Kline.Low,
-			event.Kline.Close,
-			event.Kline.Volume,
-			event.Kline.TradeNum,
-			event.Kline.IsFinal,
-			event.Kline.QuoteVolume,
-			event.Kline.ActiveBuyVolume,
-			event.Kline.ActiveBuyQuoteVolume,
-		)
+		ticker := models.Ticker{
+			ID:                   primitive.NewObjectID(),
+			EventTime:            event.Time,
+			StartTime:            event.Kline.StartTime,
+			EndTime:              event.Kline.EndTime,
+			Symbol:               event.Kline.Symbol,
+			Interval:             event.Kline.Interval,
+			FirstTradeID:         event.Kline.FirstTradeID,
+			LastTradeID:          event.Kline.LastTradeID,
+			Open:                 event.Kline.Open,
+			High:                 event.Kline.High,
+			Low:                  event.Kline.Low,
+			Close:                event.Kline.Close,
+			Volume:               event.Kline.Volume,
+			TradeNum:             event.Kline.TradeNum,
+			IsFinal:              event.Kline.IsFinal,
+			QuoteVolume:          event.Kline.QuoteVolume,
+			ActiveBuyVolume:      event.Kline.ActiveBuyVolume,
+			ActiveBuyQuoteVolume: event.Kline.ActiveBuyQuoteVolume,
+		}
+		if _, err := models.TickerCollection.InsertOne(context.TODO(), &ticker, options.InsertOne()); err != nil {
+			log.Error(err)
+		}
 	}
 
 	errHandler := func(err error) {
