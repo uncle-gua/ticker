@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/uncle-gua/go-binance/v2/futures"
+	"github.com/uncle-gua/log"
 )
 
 const (
@@ -35,17 +36,17 @@ func main() {
 	}
 
 	errHandler := func(err error) {
-		fmt.Println(err)
+		log.Error(err)
 	}
 
 	defer func() {
 		if err := recover(); err != nil {
-			fmt.Println(err)
+			log.Error(err)
 		}
 	}()
 	doneC, _, err := futures.WsKlineServe("ETHUSDT", "1m", wsKlineHandler, errHandler)
 	if err != nil {
-		fmt.Println(err)
+		log.Error(err)
 		return
 	}
 	<-doneC

@@ -23,8 +23,16 @@ github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.4.0 h1:2E4SXV/wtOkTonXsotYi4li6zVWxYlZuYNCXe9XRJyk=
 github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
+github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/uncle-gua/go-binance/v2 v2.0.0-20221124023341-b495e50a4c58 h1:0H63Ca59COznOgHBqQ3+wnVOI+lemyLUI/kGOhD9Ww0=
 github.com/uncle-gua/go-binance/v2 v2.0.0-20221124023341-b495e50a4c58/go.mod h1:AA2f7LcDx6efvAHACyUCOMV5/1ybR4TRE/Zn6CI2aW8=
+github.com/uncle-gua/go-binance/v2 v2.0.0-20221227034854-c368bf07d6dd h1:XgKjuYgwetCYaaCHaAzfoYs3jHnUIsr5gDB3oSYYijA=
+github.com/uncle-gua/go-binance/v2 v2.0.0-20221227034854-c368bf07d6dd/go.mod h1:AA2f7LcDx6efvAHACyUCOMV5/1ybR4TRE/Zn6CI2aW8=
+github.com/uncle-gua/log v0.0.0-20221204022824-ca8d28e70377 h1:m3SxxUqAJYyPNG/0+Q7rsXNuNPQboM2bypCi9vYP5yc=
+github.com/uncle-gua/log v0.0.0-20221204022824-ca8d28e70377/go.mod h1:Ujs3Dw3mCJlXWF2Q/d862bcG2/9JAND/9TpRGQ7y6Og=
+golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8 h1:0A+M6Uqn+Eje4kHMK80dtF3JCXC4ykBgQG4Fe06QRhQ=
+golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v2 v2.2.2 h1:ZCJp+EgiOT7lHqUV2J862kp8Qj64Jo6az82+3Td9dZw=
 gopkg.in/yaml.v2 v2.2.2/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
+gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
