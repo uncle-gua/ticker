@@ -25,7 +25,9 @@ func init() {
 
 	var err error
 	Client, err = mongo.Connect(ctx, options.Client().ApplyURI(DBHost))
-	log.Fatal(err)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	TickerCollection = Client.Database(DBName).Collection("ETHUSDT_1m")
 }
