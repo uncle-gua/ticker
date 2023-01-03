@@ -3,7 +3,7 @@ module ticker
 go 1.19
 
 require (
-	github.com/uncle-gua/go-binance/v2 v2.0.0-20221227034854-c368bf07d6dd
+	github.com/uncle-gua/gobinance v0.0.0-20230101182020-dd20b25eda02
 	go.mongodb.org/mongo-driver v1.11.1
 )
 

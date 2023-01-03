@@ -5,7 +5,7 @@ import (
 	"ticker/models"
 	"time"
 
-	"github.com/uncle-gua/go-binance/v2/futures"
+	"github.com/uncle-gua/gobinance/futures"
 	"github.com/uncle-gua/log"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/options"
