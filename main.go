@@ -53,7 +53,7 @@ func main() {
 			log.Error(err)
 		}
 	}()
-	doneC, _, err := futures.WsKlineServe("ETHUSDT", "1m", wsKlineHandler, errHandler)
+	doneC, err := futures.WsKlineServe("ETHUSDT", "1m", wsKlineHandler, errHandler)
 	if err != nil {
 		log.Error(err)
 		return
