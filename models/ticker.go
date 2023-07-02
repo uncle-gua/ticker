@@ -7,6 +7,7 @@ import (
 type Ticker struct {
 	ID                   primitive.ObjectID `bson:"_id"`
 	EventTime            int64              `bson:"eventTime"`
+	LocalTime            int64              `bson:"localTime"`
 	StartTime            int64              `bson:"startTime"`
 	EndTime              int64              `bson:"endTime"`
 	Symbol               string             `bson:"symbol"`

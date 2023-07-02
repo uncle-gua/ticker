@@ -21,6 +21,7 @@ func main() {
 		ticker := models.Ticker{
 			ID:                   primitive.NewObjectID(),
 			EventTime:            event.Time,
+			LocalTime:            time.Now().UnixMilli(),
 			StartTime:            event.Kline.StartTime,
 			EndTime:              event.Kline.EndTime,
 			Symbol:               event.Kline.Symbol,
@@ -48,12 +49,16 @@ func main() {
 		log.Error(err)
 	}
 
+	infoHanler := func(format string, a ...any) {
+		log.Info(format, a)
+	}
+
 	defer func() {
 		if err := recover(); err != nil {
 			log.Error(err)
 		}
 	}()
-	doneC, err := futures.WsKlineServe("ETHUSDT", "1m", wsKlineHandler, errHandler)
+	doneC, err := futures.WsKlineServe("ETHUSDT", "1m", wsKlineHandler, errHandler, infoHanler)
 	if err != nil {
 		log.Error(err)
 		return
