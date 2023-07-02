@@ -50,7 +50,7 @@ func main() {
 	}
 
 	infoHanler := func(format string, a ...any) {
-		log.Info(format, a)
+		log.Infof(format, a...)
 	}
 
 	defer func() {
