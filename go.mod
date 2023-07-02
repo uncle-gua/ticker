@@ -16,7 +16,6 @@ require (
 	github.com/klauspost/compress v1.16.6 // indirect
 	github.com/montanaflynn/stats v0.7.1 // indirect
 	github.com/panjf2000/ants/v2 v2.8.0 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/uncle-gua/wsc v0.0.0-20230607192913-877e3ba4b463 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.1.2 // indirect
