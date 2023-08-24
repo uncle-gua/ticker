@@ -49,21 +49,7 @@ func main() {
 		log.Error(err)
 	}
 
-	logger := &futures.Logger{
-		OnConnected:    true,
-		OnClose:        true,
-		OnPingReceived: true,
-		OnPongReceived: true,
-		OnKeepalive:    true,
-		Log:            log.Infof,
-	}
-
-	defer func() {
-		if err := recover(); err != nil {
-			log.Error(err)
-		}
-	}()
-	doneC, err := futures.WsKlineServe("ETHUSDT", "1m", wsKlineHandler, errHandler, logger)
+	doneC, err := futures.WsKlineServe("ETHUSDT", "1m", wsKlineHandler, errHandler)
 	if err != nil {
 		log.Error(err)
 		return

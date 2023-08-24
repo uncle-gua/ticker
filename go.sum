@@ -44,6 +44,8 @@ github.com/panjf2000/ants/v2 v2.7.5 h1:/vhh0Hza9G1vP1PdCj9hl6MUzCRbmtcTJL0Osnmyt
 github.com/panjf2000/ants/v2 v2.7.5/go.mod h1:KIBmYG9QQX5U2qzFP/yQJaq/nSb6rahS9iEHkrCMgM8=
 github.com/panjf2000/ants/v2 v2.8.0 h1:4p4gPabD6iNM9Y5NpMc0g0L15uXDmfn6jkW5KP+oiHQ=
 github.com/panjf2000/ants/v2 v2.8.0/go.mod h1:KIBmYG9QQX5U2qzFP/yQJaq/nSb6rahS9iEHkrCMgM8=
+github.com/panjf2000/ants/v2 v2.8.1 h1:C+n/f++aiW8kHCExKlpX6X+okmxKXP7DWLutxuAPuwQ=
+github.com/panjf2000/ants/v2 v2.8.1/go.mod h1:KIBmYG9QQX5U2qzFP/yQJaq/nSb6rahS9iEHkrCMgM8=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
@@ -68,6 +70,8 @@ github.com/uncle-gua/gobinance v0.0.0-20230702151208-e8c3f77989fe h1:JOc5eHviJfL
 github.com/uncle-gua/gobinance v0.0.0-20230702151208-e8c3f77989fe/go.mod h1:uHJMw9nYd32fzYYRXVdVyNSM3NMRB0BwT/icTAQeGd4=
 github.com/uncle-gua/gobinance v0.0.0-20230704224827-58cd831243bf h1:wrsT6CygL9XaGi6CfCtY3wVz3wiBVb/twE7QRBGIMhk=
 github.com/uncle-gua/gobinance v0.0.0-20230704224827-58cd831243bf/go.mod h1:O2fDBkS0arjt/h+r4cD4TroF8C+SnTADrFjn8Oxm8Mc=
+github.com/uncle-gua/gobinance v0.0.0-20230824232338-e3e2aaa1d7d6 h1:9ptrOTfe3vuF/1LtFRAD+465JzUw1crazmQbZqywA9w=
+github.com/uncle-gua/gobinance v0.0.0-20230824232338-e3e2aaa1d7d6/go.mod h1:O2fDBkS0arjt/h+r4cD4TroF8C+SnTADrFjn8Oxm8Mc=
 github.com/uncle-gua/log v0.0.0-20221204022824-ca8d28e70377 h1:m3SxxUqAJYyPNG/0+Q7rsXNuNPQboM2bypCi9vYP5yc=
 github.com/uncle-gua/log v0.0.0-20221204022824-ca8d28e70377/go.mod h1:Ujs3Dw3mCJlXWF2Q/d862bcG2/9JAND/9TpRGQ7y6Og=
 github.com/uncle-gua/wsc v0.0.0-20230607192913-877e3ba4b463 h1:Wi4zDZ8u82UlVvxVUDhCBEGJ/FCQ9Ls5Tu8AjhGRz7U=
